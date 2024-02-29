@@ -42,42 +42,11 @@ def getPaths(mode = 'relative', first = False, second = False, third = False, de
         path_cruise = 'EMB177/'
     elif third == True:
         path_cruise = 'EMB217/'
-    
-    if mode == 'absolute_IOW':
-        operating_system = 'windoof'
-        
-        groundpath = 'D:/olivert/'
-        groundpath_mss = 'D:/olivert/data/robotrace_campaigns/data-cruises-mss/data_paper/mss_data_all/'
-        path_mss_interpolated = 'D:/olivert/results/allCruises/mss_transects/'
-
-        path_to_wind = 'D:/olivert/results/allCruises/winddata_meteo/'
-
-        if first == True:
-            if deep == True:
-                finepathADCP = 'results/2017_EMB169/deployments/moorings/Peter_TC_tief/'
-            else:
-                finepathADCP = 'results/2017_EMB169/deployments/moorings/Peter_TC_flach/' 
-        
-        if second == True:
-            if deep == True:
-                finepathADCP = 'results/2018_EMB177/deployments/moorings/TC-tief/'
-            else:
-                finepathADCP = 'results/2018_EMB177/deployments/moorings/TC-flach/'
-        
-        if third == True:
-            if deep == True:
-                finepathADCP = 'results/2019_EMB217/deployments/moorings/TC_Tief/'
-            else:
-                finepathADCP = 'results/2019_EMB217/deployments/moorings/TC_Flach/'
             
-        path_results = groundpath + 'results/'
-        # path_ADCP_data = groundpath + finepathADCP + 'adcp/data/'
-        # path_to_mss_files = groundpath_mss + path_cruise
-        # cruise = finepath_mss_matlab[:-1]
-            
-    elif mode == 'relative':
+    if mode == 'relative':
         operating_system = 'linux'
-        #from Master/Thesis/dode
+        #may need to change the operating system bc some start and endtime calculations for mss casts involve machine locale settings
+        #other option: 'windoof'
         groundpath = '../'
         groundpath_mss = groundpath + 'data_mss/mss_data_all/'
         path_mss_interpolated = groundpath + 'results/mss/mss_interpolated/'
