@@ -1,8 +1,7 @@
 ####################################################
 Code structrue:
 The code is provided in different files, each named roughly after what they're doing. First, the files starting with 00 have to be run, then 01, 02 ... 99.
-77 are plot files
-99 are files for debugging.    
+77 are plot files  
 
 Most files are structured in a main, that can be called for each cruise individually. For plotting this is sometimes required, because axes are not cleared accordingly.
 
